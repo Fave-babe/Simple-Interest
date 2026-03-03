@@ -6,13 +6,22 @@ console.log("from javascript file");
 // console.log("this is score", candidateScore.value);
 
 
-const principalInput = document.getElementById("principal");
+ const principalInput  = document.getElementById("principal");
 const  rateInput= document.getElementById("rate");
-const timeInput = document.getElementById("time");
+ const timeInput = document.getElementById("time");
 const calculateButton = document.getElementById("calculateButton");
 
+
 calculateButton.addEventListener("click", () => {
-    let result = principalInput.value * timeInput.value
- * rateInput.value/100
-    console.log(result)
+
+let p = Number(principalInput.value);
+let r = Number(rateInput.value/100);
+let t = Number(timeInput.value)
+let interest = p * r * t
+
+    let totalAmount = interest + p
+    console.log( totalAmount)
+    
+    document.write(totalAmount)
+    
 })
